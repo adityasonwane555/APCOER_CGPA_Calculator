@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="server.js" defer></script>
+</head>
+<body>
+  <div class="header-image">
+    <img src="APCOER.jpg" alt="APCOER College Header" class="header-img">
+  </div>
+  
+  <div class="wrapper">
+    <div class="topbox">
+      <div class="logo">
+        <img src="apcoerlogo.jpg" alt="abmspcoerpune">
+        <h3></h3>
+        <a href="https://abmspcoerpune.org/"></a>
+      </div>
+      <div class="namebox">
+        <h3 title="abmspcoerpune">Anantroa Pawar College Of Engineering & Research</h3>
+        <a href="https://abmspcoerpune.org/" target="_blank" title="abmspcoerpune"></a>
+      </div>
+      <div class="namedept">Examination Department</div>
+    </div>
+
+    <div class="mainbox">
+      <div class="tile" style="font-size: large; font-weight: bold; color:#8b4513 ;">CGPA Converter into Percentage</div>
+
+      <div class="input-row">
+        <div class="input-label">Enter CGPA:</div>
+        <div class="input-box">
+          <input id="cgpa_input" type="number" min="0.00" max="10.0" step="0.01">
+        </div>
+        <div class="input-button">
+          <button id="convert_btn" type="button" onclick="convertCGPA()">Convert</button>
+        </div>
+      </div>
+
+      <div class="warning" id="error_msg"></div>
+      
+      <div class="output_table">
+        <table id="optable" border="1" cellspacing="0" cellpadding="5">
+          <tbody>
+            <tr>
+              <td class="col1">CGPA</td>
+              <td id="op_cgpa">-</td>
+            </tr>
+            <tr>
+              <td class="col1">Grade</td>
+              <td id="op_grade">-</td>
+            </tr>
+            <tr>
+              <td class="col1">Percentage</td>
+              <td id="op_per">-</td>
+            </tr>
+            <tr>
+              <td class="col1">Class</td>
+              <td id="op_class">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="export-section">
+        <button id="export_btn" type="button" onclick="exportTableToExcel('optable')">Export to Excel</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
